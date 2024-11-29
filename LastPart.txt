@@ -1,0 +1,40 @@
+def main():
+    while True:
+        print("1.--- Probability Distribution Calculator ---")
+        choice = input("Enter your choice (1/2)")
+        if choice == "2":
+            print("Exiting the program. Goodbye!")
+            break
+        try:
+            # Get distribution name
+            dist_name = input("Enter the name of the distribution (Geometric/Binomial/Poisson/Uniform): ").strip().lower()
+        
+            # Distribution-specific parameters
+            params = {}
+            if dist_name == "geometric":
+                vals = list(map(float, input("Enter the values (space-separated integers): ").split()))
+                params["p"] = float(input("Enter the success probability (p): "))
+            elif dist_name == "binomial":
+                vals = list(map(float, input("Enter the values (space-separated integers): ").split()))
+                params["n"] = int(input("Enter the number of trials (n): "))
+                params["p"] = float(input("Enter the success probability (p): "))
+            elif dist_name == "poisson":
+                vals = list(map(float, input("Enter the values (space-separated integers): ").split()))
+                params["mu"] = float(input("Enter the rate parameter mu: "))
+            elif dist_name == "uniform":
+                vals = list(map(float, input("Enter the values (space-separated integers): ").split()))
+                params["a"] = float(input("Enter the start of the interval (a): "))
+                params["b"] = float(input("Enter the end of the interval (b): "))
+            else:
+                raise ValueError("Invalid distribution name.")
+        
+        # Get probabilities
+            probabilities = get_probability_distribution(dist_name, params, vals)
+        
+        except ValueError as e:
+            print(f"Error: {e}")   
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+
+if __name__ == "__main__":
+    main()
