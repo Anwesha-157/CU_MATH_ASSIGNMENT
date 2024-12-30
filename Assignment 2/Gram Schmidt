@@ -49,3 +49,25 @@ class GramSchmidt:
             raise ValueError("The input vectors are not linearly independent.")
 
         return vectors
+  def inner_product(self, v, w):
+        """
+        Computes the inner product of two vectors v and w.
+        """
+        return np.dot(v, w)
+
+  def do_gram_schmidt(self):
+        """
+        Applies the Gram-Schmidt process to the input vectors.
+        """
+        orthonormal_basis = []
+
+        for v in self.vectors:
+            w = v.astype(np.float64).copy()
+            for u in orthonormal_basis:
+                proj = self.inner_product(v, u) * u
+                w -= proj
+            norm = np.linalg.norm(w)
+            if norm > 1e-10:
+                orthonormal_basis.append(w / norm)
+
+           return orthonormal_basis
