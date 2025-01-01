@@ -95,3 +95,185 @@ def verify_gram_schmidt(self, processed_vectors):
             return False, f"Vector {i+1} does not match its projection."
 
     return True, "Vectors follow the Gram-Schmidt process."
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = []
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 2, 3, 4],
+        [1, 2, 3]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+# Example usage
+try:
+    # Input vectors (each list is a vector)
+    input_vectors = [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, "10"],
+        [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    ]
+
+    gs = GramSchmidt(input_vectors)
+    orthonormal_basis = gs.do_gram_schmidt()
+
+    print("Orthonormal Basis:")
+    for vec in orthonormal_basis:
+        print(vec)
+
+    # Verify the result
+    valid, message = gs.verify_gram_schmidt(orthonormal_basis)
+    print(message)
+
+except ValueError as e:
+    print(f"Error: {e}")
